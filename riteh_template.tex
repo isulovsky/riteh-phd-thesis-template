@@ -1,0 +1,442 @@
+% ============================================================================
+% Doctoral Thesis LaTeX Template
+% University of Rijeka, Faculty of Engineering
+% Department of Naval Architecture and Ocean Engineering
+% ============================================================================
+% 
+% Template Version: 1.0
+% Created: 2026
+% Author: Ivan Sulovsky
+% 
+% USAGE NOTES:
+% - This is an UNOFFICIAL template created as a reference for PhD candidates
+% - Follow your faculty's official formatting guidelines for final submission
+% - Replace placeholder text (marked with "---") with your own content
+% - Uncomment/comment sections as needed (e.g., Acknowledgments, CV)
+% - Ensure all supervisor and committee information is correct
+% - Compile with: pdflatex -> bibtex -> pdflatex -> pdflatex
+%
+% TEMPLATE STRUCTURE:
+% - Bilingual title pages (English + Croatian)
+% - Standard sections: Introduction, Results, Conclusions
+% - Nomenclature and abbreviations
+% - Bibliography with natbib authoryear style
+% - List of publications and CV (optional)
+%
+% For questions or improvements, contact: ivan.sulovsky@uniri.hr
+% 
+% ============================================================================
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage[authoryear]{natbib}
+
+\bibliographystyle{plainnat}
+
+\setcitestyle{brackets}
+
+ \usepackage{nomencl}
+ \makenomenclature
+
+\renewcommand{\nomname}{\section{Nomenclature}}
+\renewcommand{\nomname}{\subsection*{Abbreviations}}
+\renewcommand{\nomname}{\subsection*{Lowercase}}
+\renewcommand{\nomname}{\subsection*{Lowercase}}
+\renewcommand{\nomname}{\subsection*{Greek}}
+
+
+\usepackage[absolute,overlay]{textpos}
+
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{subcaption}
+\usepackage{tocloft}
+\setlength{\cftbeforesecskip}{2pt}
+\setlength{\cftbeforesubsecskip}{0pt}
+\setlength{\cftbeforefigskip}{2pt}
+\usepackage{titlesec}
+\usepackage{ragged2e}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{makecell}
+\usepackage[tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{afterpage}
+\usepackage{setspace}
+\usepackage{overpic}
+\usepackage[disable]{todonotes}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{babel}
+\usepackage{caption}
+\usepackage{multirow}%
+\usepackage{amsmath,amssymb,amsfonts}%
+\usepackage{mathrsfs}%
+\usepackage[title]{appendix}%
+\usepackage{xcolor}%
+\usepackage{textcomp}%
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows, positioning, calc}
+\usepackage{manyfoot}%
+\usepackage{booktabs}%
+\usepackage{algorithm}%
+\usepackage{algpseudocode}%
+\usepackage{listings}%
+\usepackage{fancyhdr}
+\usepackage{microtype}
+
+\usepackage{bibentry}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	citecolor=black,      
+}
+\def\sectionautorefname{Chapter}%
+\usepackage{acronym}
+\makeatletter
+\let\AC@unpack\@firstofone
+\makeatother
+
+
+\nobibliography* 
+
+
+\pagestyle{fancy}
+
+\fancyhf{} % Clear defaults
+
+\fancyhead[L]{\footnotesize Perić P.: The Title of My PhD}
+\fancyhead[R]{\thepage}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+\addtocontents{lof}{\protect\thispagestyle{fancy}}
+\addtocontents{lot}{\protect\thispagestyle{fancy}}
+
+
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows.meta}
+
+\raggedbottom
+\graphicspath{ {images/} }
+\date{}
+% Title Page
+
+
+\newpage
+\begin{document}
+
+	\newgeometry{
+		left=3cm,
+		right=3cm,
+		top=3cm,
+		bottom=3cm
+	}
+
+	
+	\thispagestyle{empty}
+	\centering
+	%\newgeometry{tmargin=3cm}
+	\fontsize{16}{17.5}\selectfont\
+	{UNIVERSITY OF RIJEKA}\\
+	%\vspace{0.3cm}
+	{ FACULTY OF ENGINEERING}\\
+	%\vspace{0.2cm}
+	{ Department of ---------}\\ % Insert the name of your department, not obligatory
+	\vspace{5cm}
+	{Pero Perić}\\
+	\vspace{1cm}
+	{\fontsize{22}{23.5}\selectfont{\textbf{ The Title of My PhD}}}\\
+	\vspace{1cm}
+	{DOCTORAL THESIS}\\
+
+	\vfill
+	\fontsize{16}{17.5}\selectfont\
+	{Rijeka, 2026}\\ % Don't forget to correct year
+	
+
+
+%\maketitle
+%\thispagestyle{empty}
+%\newpage
+\pagenumbering{roman}
+%\pagenumbering{gobble}
+\newpage
+\-
+\thispagestyle{empty}
+\newpage
+
+\thispagestyle{empty}
+\centering
+
+\fontsize{16}{17.5}\selectfont\
+{UNIVERSITY OF RIJEKA}\\
+
+{ FACULTY OF ENGINEERING}\\
+
+{ Department of ---------}\\
+\vspace{5cm}
+{Pero Perić}\\
+\vspace{1cm}
+{\fontsize{22}{23.5}\selectfont{\textbf{The Title of My PhD}}}\\
+\vspace{1cm}
+{DOCTORAL THESIS}\\
+\vspace{3cm}
+{Supervisor: Prof. dr. sc. Name Surname}\\
+\vspace{0.4cm}
+{Co-supervisor:Prof. dr. sc. Name Surname}
+
+
+
+\vspace*{\fill}
+Rijeka, 2026
+\newpage
+\-
+\thispagestyle{empty}
+\newpage
+
+\thispagestyle{empty}
+\centering
+
+\fontsize{16}{16}\selectfont\
+{SVEUČILIŠTE U RIJECI}\\
+
+{ TEHNIČKI FAKULTET}\\
+
+{ Zavod za -----------}\\
+\vspace{5cm}
+{Pero Perić}\\
+\vspace{1cm}
+{\fontsize{22}{22}\selectfont{\textbf{ Naslov Moje Doktorske Disertacije}}}\\
+\vspace{1cm}
+{DOKTORSKI RAD}\\
+\vspace{3cm}
+{Mentor: Prof. dr. sc. Ime Prezime}\\
+\vspace{0.4cm}
+{Komentor: Prof. dr. sc. Ime prezime}
+
+
+
+\vspace*{\fill}
+Rijeka, 2026 % correct year!
+\newpage
+\-
+\thispagestyle{empty}
+\newpage
+\thispagestyle{empty}
+\flushleft
+\normalsize
+Thesis Supervisor: Prof. Name Surname, PhD\\
+University of Rijeka, Faculty of Engineering, Croatia\\
+\vspace{1cm}
+Thesis Co-Supervisor: Prof. Name Surname, PhD\\
+University of Rijeka, Faculty of Engineering, Croatia\\
+\vspace{1cm}
+
+This doctoral thesis was defended on \underline{\hspace{3cm}}at the University of Rijeka,
+Faculty of Engineering, Rijeka, Croatia, in front of the following Evaluation
+Committee:\\
+\vspace{1cm}
+
+1.  Prof. Name Surname, PhD, Chairman of the Committee\\
+University of Rijeka, Faculty of Engineering, Croatia\\
+\vspace{0.5cm}
+2. Prof. Name Surname, , PhD, Member of the Committee\\
+University of Rijeka, Faculty of Engineering, Croatia\\
+\vspace{0.5cm}
+3. Prof. Name Surname,  PhD, Member of the Committee\\
+University of Zagreb, Faculty of Mechanical Engineering and Naval Architecture, Croatia
+\newpage
+\thispagestyle{empty}
+\-
+\newpage
+\restoregeometry
+\input{Acknowledgments} % When you are sending your PhD for evaluation first, you want to comment acknowledgments.
+%\input{REBUS}
+\newpage
+\section*{Abstract}
+\addcontentsline{toc}{section}{Abstract}
+\normalsize
+\justifying
+
+
+Abstract of my PhD in english language.\\
+
+
+
+
+
+\justifying
+\normalsize
+
+\textbf{Key words}\\
+key word1, key word2, key word3
+\newpage
+\section*{PROŠIRENI SAŽETAK}
+Prošireni sažetak mojeg doktorata. Do maksimalno dvije stranice.\\
+\addcontentsline{toc}{section}{Prošireni sažetak}
+\justifying
+\normalsize
+
+\textbf{Ključne riječi}\\
+ključna riječ1, ključna riječ2, ključna riječ 3.
+\newpage
+
+\pagenumbering{gobble}
+\setcounter{section}{0}
+\tableofcontents
+\newpage
+\newpage
+
+
+\pagenumbering{arabic}
+\pagestyle{fancy}
+
+ 
+\section[Introduction]{INTRODUCTION} \label{Introduction}
+Introduction to you PhD.
+
+\subsection{Literature Review}\label{Literature Review}
+Literature review may well fit in the introduction. In this template, authoryear formatting has been set for citations. For example: "This has been shown in \cite{patankar1980numerical}".\\
+
+Also, when referencing, pay attention to inline citations:\\ 
+
+With inline citations you want to use citep, for example: \citep{patankar1980numerical} first established and verified pressure-velocity coupling for steady-state \ac{CFD}.\\
+
+While for "regular" citing you want to use clean cite, for example: "This has firstly been shown in \cite{patankar1980numerical}".\\
+  
+ 
+\subsection{Objectives and Main Hypotheses}\label{Objectives and main hypothesis}
+Subsection for listing the objectives of your PhD, followed naturally by hypothesis tested.
+
+ Based on these objectives, two primary research hypotheses are formulated:\\
+The first hypothesis reads:\\
+\begin{center}
+	\textit{If i change A, the expected change in B is in direct correlation with C.}
+\end{center}
+
+The second hypothesis is formulated as:\\
+\begin{center}
+	\textit{The correlation between B and C is tightly coupled with observed changes in D.}
+\end{center}
+
+\newpage
+
+
+\subsection{Organization of the Thesis} \label{Organization of the thesis}
+Explain the structure of your thesis. Introduction is given in \autoref{Introduction}, in \autoref{First section} this and this is stated etc.
+ 
+\newpage
+
+\section[First Section]{FIRST SECTION}\label{First section}
+
+Contents of the first Section.
+
+\subsection{First subsection}\label{First subsection}
+Contents of the first subsection. Here, an example of figure insertion and referring to it is given:\\
+
+A polyhedral control volume is given \autoref{fig1}: 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{figures/cv.png}
+	\caption{Polyhedral control volume with geometric notation}\label{fig1}
+\end{figure}
+
+
+\subsubsection{First subsubsection}\label{First subsubsection}\label{gov}
+Contents of the first subsubsection. Here, an example of equation formatting is given:\\
+
+The continuity equation, considering constant density reads:
+\begin{equation}
+	\nabla \cdot \mathbf{u}_r = 0
+		\label{eq:1}
+\end{equation}
+where the $\mathbf{u}_r$ term accounts for relative fluid velocity to mesh points velocity.
+
+Also, an example of table is given:\\
+
+
+
+\begin{table}[H]
+	\centering
+	\normalsize
+	\caption{Table example.} 
+	\label{table 1}
+	\begin{tabular}{c c cc }
+		\textbf{Parameter}&\textbf{Unit}&\textbf{Symbol}&\textbf{Value} \\ [0.9ex]
+		\hline
+		Length between perp. & m & $L_{PP}$&51.4\\ 
+		\hline
+			\end{tabular}
+\end{table} 
+\newpage
+\section[Discussion of the Results]{DISCUSSION OF THE RESULTS}\label{discussion}
+Contents of the discussion. This section is completely arbitrary and not obligatory.
+
+\newpage
+\section[Conclusions and Future Work]{CONCLUSIONS AND FUTURE WORK}\label{conclusions}
+Conclusions drawn from you PhD.
+\newpage
+\subsection{Scientific Contributions} \label{Scientific contributions}
+
+Scientific contributions drawn from you PhD. You may us bullets as: \\
+
+$\bullet$ \hspace{0.5cm}  The implications of this PhD will change the course of mankind in X way.\\
+
+$\bullet$ \hspace{0.5cm}  The implications of this PhD will change the course of mankind in Y way.\\
+
+$\bullet$ \hspace{0.5cm}  The implications of this PhD will change the course of mankind in Z way.\\
+
+
+\newpage
+
+\subsection{Future Work}
+
+You may want to segregate future work from conclusions.
+
+
+
+\newpage
+\bibliography{bibliography}
+\newpage
+\listoffigures
+\addcontentsline{toc}{section}{List of Figures}
+\newpage
+\listoftables
+\addcontentsline{toc}{section}{List of Tables}
+\newpage
+\section*{Abbreviations}\label{abre}
+\addcontentsline{toc}{section}{Abbreviations}
+\begin{acronym}
+	\acro{CFD}{Computational Fluid Dynamics}
+\end{acronym}
+\newpage
+\section*{List of Publications}\label{listof}
+\addcontentsline{toc}{section}{List of Publications}
+The list of publications is not mandatory.
+\subsection*{Journal articles}
+\begin{enumerate}
+	\item \bibentry{myArticle}
+\end{enumerate}
+
+\subsection*{Conference Proceedings}
+\begin{enumerate}
+	\item \bibentry{myConfArticle}
+
+\end{enumerate}
+
+
+\newpage
+
+\section*{Curriculum Vitae}
+\addcontentsline{toc}{section}{Curriculum Vitae}
+The inclusion of CV is completely arbitrary and is not needed.
+
+
+
+\end{document}   
+
+       
